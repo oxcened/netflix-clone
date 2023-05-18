@@ -1,6 +1,11 @@
 {
   "name": "netflix-clone",
   "version": "0.1.0",
+  "author": {
+    "email": "hello@alenajam.dev",
+    "name": "Alen Ajam",
+    "url": "https://alenajam.dev"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
