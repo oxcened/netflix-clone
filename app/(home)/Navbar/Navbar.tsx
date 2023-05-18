@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Navbar() {
   return (
-    <nav className="bg-gradient-to-b from-black/70 from-10%">
+    <nav className="bg-gradient-to-b from-black/70 from-10% fixed top-0 left-0 right-0">
       <div className="container mx-auto px-4 lg:px-0 py-3 flex items-center gap-10">
         <a href="#">
           <Image src="/logo.svg" alt="User avatar" height={30} width={92} />
