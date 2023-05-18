@@ -16,7 +16,7 @@ This is a Netflix clone that I've built because reasons.
 
 ## Demo
 
-Coming soon!
+You can view the demo [here](https://netflix-clone-inky-nine.vercel.app/).
 
 ## Key Features
 
