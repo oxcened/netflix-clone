@@ -7,6 +7,12 @@
     "url": "https://alenajam.dev"
   },
   "private": true,
+  "repository": "https://github.com/oxcened/netflix-clone",
+  "homepage": "https://github.com/oxcened/netflix-clone",
+  "bugs": {
+    "url": "https://github.com/oxcened/netflix-clone/issues",
+    "email": "hello@alenajam.dev"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
