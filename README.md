@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
 
 <h1>
 <img src="./logo.webp" alt="logo" height="100px"/>
