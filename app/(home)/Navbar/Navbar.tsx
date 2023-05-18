@@ -3,10 +3,13 @@
 import Image from 'next/image';
 import useScrolled from '@/app/hooks/useScrolled';
 import { twMerge } from 'tailwind-merge';
+import useViewportWidth from '@/app/hooks/useViewportWidth';
 
 export default function Navbar() {
   const isScrolled = useScrolled();
-  
+  const width = useViewportWidth();
+  const isDesktop = width > 1024;
+
   return (
     <nav
       className={twMerge(
@@ -25,33 +28,42 @@ export default function Navbar() {
               Home
             </a>
           </li>
-          <li>
-            <a href="#">TV Shows</a>
-          </li>
-          <li>
-            <a href="#">Movies</a>
-          </li>
-          <li>
-            <a href="#">New & Popular</a>
-          </li>
-          <li>
-            <a href="#">My List</a>
-          </li>
-          <li>
-            <a href="#">Browse by Languages</a>
-          </li>
 
-          <li className="ml-auto">
-            <button>Search</button>
-          </li>
+          {isDesktop ? (
+            <>
+              <li>
+                <a href="#">TV Shows</a>
+              </li>
+              <li>
+                <a href="#">Movies</a>
+              </li>
+              <li>
+                <a href="#">New & Popular</a>
+              </li>
+              <li>
+                <a href="#">My List</a>
+              </li>
+              <li>
+                <a href="#">Browse by Languages</a>
+              </li>
 
-          <li>
-            <a href="#">Kids</a>
-          </li>
+              <li className="ml-auto">
+                <button>Search</button>
+              </li>
 
-          <li>
-            <button>Notifications</button>
-          </li>
+              <li>
+                <a href="#">Kids</a>
+              </li>
+
+              <li>
+                <button>Notifications</button>
+              </li>
+            </>
+          ) : (
+            <li className="ml-auto">
+              <button>Search</button>
+            </li>
+          )}
 
           <li>
             <button>
