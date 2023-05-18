@@ -35,7 +35,7 @@ export default function Navbar() {
           </li>
 
           <li>
-            <button>Kids</button>
+            <a href="#">Kids</a>
           </li>
 
           <li>
