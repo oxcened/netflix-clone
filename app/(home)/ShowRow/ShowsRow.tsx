@@ -19,12 +19,12 @@ export default function ShowsRow() {
 
   return (
     <section>
-      <h2 className="font-bold text-white text-lg container mx-auto px-4 lg:px-0">
+      <h2 className="font-bold text-white text-lg container mx-auto px-4">
         TV Dramas
       </h2>
       <div className="mt-2 overflow-hidden">
         <div
-          className={`grid gap-2 container mx-auto px-4 lg:px-0`}
+          className="grid gap-2 container mx-auto px-4"
           style={{ gridTemplateColumns: `repeat(${size}, minmax(0, 1fr))` }}
         >
           {new Array(size).fill(0).map((v, i) => (

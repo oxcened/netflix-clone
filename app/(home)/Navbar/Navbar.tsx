@@ -17,7 +17,7 @@ export default function Navbar() {
         isScrolled && 'bg-neutral-900'
       )}
     >
-      <div className="container mx-auto px-4 lg:px-0 py-3 flex items-center gap-10">
+      <div className="container mx-auto px-4 py-3 flex items-center gap-10">
         <a href="#">
           <Image src="/logo.svg" alt="User avatar" height={30} width={92} />
         </a>

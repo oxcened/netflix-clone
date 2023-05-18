@@ -8,7 +8,7 @@ export default function HomePage() {
       <Navbar />
 
       <div className="bg-[url(/header_background.webp)] bg-no-repeat bg-center bg-cover pt-32 aspect-video items-center hidden lg:flex">
-        <header className="container mx-auto px-4 lg:px-0 mb-20">
+        <header className="container mx-auto px-4 mb-20">
           <Image
             src="/header_logo.webp"
             alt="TV Series logo"
@@ -22,12 +22,12 @@ export default function HomePage() {
             Nevermore Academy.
           </p>
 
-          <button className="bg-white rounded-[4px] text-lg font-medium px-5 py-1.5 inline-flex items-center gap-3">
+          <button className="bg-white rounded-[4px] text-lg font-medium px-5 py-1.5 inline-flex items-center gap-3 hover:bg-white/80">
             <Image src="/play_icon.svg" alt="play" width={25} height={25} />
             Play
           </button>
 
-          <button className="bg-neutral-800/40 rounded-[4px] text-lg font-medium px-6 py-1.5 ml-2 text-white inline-flex items-center gap-3">
+          <button className="bg-neutral-800/40 rounded-[4px] text-lg font-medium px-6 py-1.5 ml-2 text-white inline-flex items-center gap-3 hover:bg-neutral-800/20">
             <Image src="/info_icon.svg" alt="play" width={25} height={25} />
             More Info
           </button>
