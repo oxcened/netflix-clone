@@ -1,8 +1,19 @@
+'use client';
+
 import Image from 'next/image';
+import useScrolled from '@/app/hooks/useScrolled';
+import { twMerge } from 'tailwind-merge';
 
 export default function Navbar() {
+  const isScrolled = useScrolled();
+  
   return (
-    <nav className="bg-gradient-to-b from-black/70 from-10% fixed top-0 left-0 right-0">
+    <nav
+      className={twMerge(
+        'bg-gradient-to-b from-black/70 from-10% fixed top-0 left-0 right-0 z-10 transition-colors duration-500',
+        isScrolled && 'bg-neutral-900'
+      )}
+    >
       <div className="container mx-auto px-4 lg:px-0 py-3 flex items-center gap-10">
         <a href="#">
           <Image src="/logo.svg" alt="User avatar" height={30} width={92} />
