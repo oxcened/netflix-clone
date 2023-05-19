@@ -34,6 +34,10 @@ export default function ShowModal({
 }: ShowModalProps) {
   const ref = useRef(null);
 
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
   const hoveredShowRect = hoveredShow?.[0].getBoundingClientRect();
   const top = (hoveredShowRect?.top ?? 0) + window.scrollY;
   const left = (hoveredShowRect?.left ?? 0) + window.scrollX;

@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import useViewportWidth from '@/app/hooks/useViewportWidth';
 import { useEffect, useState } from 'react';
