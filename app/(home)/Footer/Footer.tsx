@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="px-[4%] py-20 lg:pt-10 bg-neutral-900 text-neutral-400 text-sm">
+    <footer className="px-[4%] py-20 lg:pt-0 bg-neutral-900 text-neutral-400 text-sm">
       <div className="flex justify-between flex-col lg:flex-row gap-12 lg:gap-0">
         <ul className="space-y-2">
           <li>
