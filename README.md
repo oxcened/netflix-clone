@@ -24,6 +24,8 @@ You can view the demo [here](https://flixclone-oxcened.vercel.app/).
 
 <img src="./.github/screenshot_1.png" alt="logo" />
 
+<img src="./.github/screenshot_2.png" alt="logo" />
+
 ## Key Features
 
 Coming soon!
