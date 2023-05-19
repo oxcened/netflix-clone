@@ -8,7 +8,7 @@ Netflix Clone
 
 This is a Netflix clone that I've built because reasons.
 
-[Demo](#demo) • [Key Features](#key-features) • [Tech Stack](#tech-stack) • [How to use](#run-on-your-machine) • [Maintainers](#maintainers) • [License](#license)
+[Demo](#demo) • [Key Features](#key-features) • [Tech Stack](#tech-stack) • [How to use](#run-on-your-machine) • [Maintainers](#maintainers) • [Credits](#credits) • [License](#license)
 
 </div>
 
@@ -46,6 +46,11 @@ Coming soon!
 ## Maintainers
 
 - [oxcened](https://github.com/oxcened)
+
+## Credits
+
+- Netflix Sans font by [Dalton Maag Ltd](https://font.gooova.com/fonts/14200/netflix-sans-font.html).
+- Chevron icon by Travis Avery from <a href="https://thenounproject.com/browse/icons/term/chevron/" target="_blank" title="chevron Icons">Noun Project</a>.
 
 ## License
 
