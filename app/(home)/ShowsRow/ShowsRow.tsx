@@ -41,6 +41,14 @@ export default function ShowsRow({
     setPage(1);
   }, [width]);
 
+  const [isTransitioning, setTransitioning] = useState(false);
+
+  useEffect(() => {
+    setTransitioning(true);
+    const timeout = window.setTimeout(() => setTransitioning(false), 700);
+    return () => window.clearTimeout(timeout);
+  }, [page]);
+  
   const size = getSliderSize(width);
   const pages = content_urls.length / size;
   const canPrev = page > 0;
@@ -53,8 +61,12 @@ export default function ShowsRow({
       <h2 className="font-medium text-neutral-200 text-lg px-[4%]">{title}</h2>
 
       <div className="mt-2 overflow-hidden px-[4%] relative">
-        {canPrev && (
-          <NavButton dir="left" onClick={() => setPage((p) => p - 1)} />
+        {(canPrev || isTransitioning) && (
+          <NavButton
+            dir="left"
+            invisible={!canPrev && isTransitioning}
+            onClick={() => setPage((p) => p - 1)}
+          />
         )}
 
         <div
@@ -86,8 +98,12 @@ export default function ShowsRow({
           ))}
         </div>
 
-        {canNext && (
-          <NavButton dir="right" onClick={() => setPage((p) => p + 1)} />
+        {(canNext || isTransitioning) && (
+          <NavButton
+            dir="right"
+            invisible={!canNext && isTransitioning}
+            onClick={() => setPage((p) => p + 1)}
+          />
         )}
       </div>
     </section>
