@@ -1,7 +1,7 @@
 <div align="center">
 
 <h1>
-<img src="./logo.webp" alt="logo" height="100px"/>
+<img src="./.github/logo.webp" alt="logo" height="100px"/>
 <br />
 FlixClone
 </h1>
@@ -22,7 +22,7 @@ You can view the demo [here](https://flixclone-oxcened.vercel.app/).
 
 ### Screenshots
 
-Coming soon!
+<img src="./.github/screenshot_1.png" alt="logo" height="300px"/>
 
 ## Key Features
 
@@ -56,7 +56,9 @@ Coming soon!
 ## Credits
 
 - Netflix Sans font by [Dalton Maag Ltd](https://font.gooova.com/fonts/14200/netflix-sans-font.html).
-- Chevron icon by Travis Avery from <a href="https://thenounproject.com/browse/icons/term/chevron/" target="_blank" title="chevron Icons">Noun Project</a>.
+- Chevron icon by Travis Avery
+  from <a href="https://thenounproject.com/browse/icons/term/chevron/" target="_blank" title="chevron Icons">Noun
+  Project</a>.
 
 ## License
 
