@@ -48,7 +48,7 @@ export default function ShowsRow({
     const timeout = window.setTimeout(() => setTransitioning(false), 700);
     return () => window.clearTimeout(timeout);
   }, [page]);
-  
+
   const size = getSliderSize(width);
   const pages = content_urls.length / size;
   const canPrev = page > 0;
