@@ -22,13 +22,17 @@ You can view the demo [here](https://flixclone-oxcened.vercel.app/).
 
 ### Screenshots
 
-<img src="./.github/screenshot_1.png" alt="logo" />
+<img src="./.github/screenshot_1.png" alt="screenshot of the homepage" />
 
-<img src="./.github/screenshot_2.png" alt="logo" />
+<img src="./.github/screenshot_2.png" alt="screenshot of the homepage with show modal open" />
 
 ## Key Features
 
-Coming soon!
+- Scroll to see the navbar background change.
+- Navigate through shows by clicking on the buttons to the edge of the screen.
+- Hover on a show to get the details.
+- Dynamic data fetched from [public/home_mock.json](./public/home_mock.json).
+- Fully responsive.
 
 ## Tech Stack
 
