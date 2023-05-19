@@ -51,12 +51,28 @@ export default function Footer() {
         </ul>
       </div>
 
-      <p className="mt-12">
-        Made with ❤️ by&nbsp;
-        <a href="https://alenajam.dev" className="underline">
-          Alen Ajam
+      <div className="mt-14 flex flex-col lg:flex-row justify-between gap-4 lg:gap-0">
+        <p>
+          Made with ❤️ by&nbsp;
+          <a
+            href="https://alenajam.dev"
+            className="underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Alen Ajam
+          </a>
+        </p>
+
+        <a
+          href="https://github.com/oxcened/netflix-clone"
+          className="underline"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Fork on GitHub
         </a>
-      </p>
+      </div>
     </footer>
   );
 }
