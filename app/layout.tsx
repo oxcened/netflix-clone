@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Netflix Clone',
+  title: 'FlixClone',
   description: 'Yet another Netflix Clone',
 };
 
