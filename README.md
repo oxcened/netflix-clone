@@ -22,7 +22,7 @@ You can view the demo [here](https://flixclone-oxcened.vercel.app/).
 
 ### Screenshots
 
-<img src="./.github/screenshot_1.png" alt="logo" height="300px"/>
+<img src="./.github/screenshot_1.png" alt="logo" />
 
 ## Key Features
 
