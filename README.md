@@ -56,9 +56,7 @@ Coming soon!
 ## Credits
 
 - Netflix Sans font by [Dalton Maag Ltd](https://font.gooova.com/fonts/14200/netflix-sans-font.html).
-- Chevron icon by Travis Avery
-  from <a href="https://thenounproject.com/browse/icons/term/chevron/" target="_blank" title="chevron Icons">Noun
-  Project</a>.
+- Icons by [Lucide](https://lucide.dev).
 
 ## License
 

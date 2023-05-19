@@ -43,6 +43,11 @@ export default function ShowModal({
   const left = (hoveredShowRect?.left ?? 0) + window.scrollX;
   const height = hoveredShowRect?.height;
   const width = hoveredShowRect?.width;
+  const buttonClass = 'w-5 h-5 rounded-full border grid place-content-center';
+  const secondaryButtonClass = twMerge(
+    buttonClass,
+    'border-neutral-500 hover:border-neutral-200'
+  );
 
   return createPortal(
     <Transition
@@ -78,15 +83,30 @@ export default function ShowModal({
             )}
           >
             <div className="flex gap-2 mb-4">
-              <button className="w-5 h-5 rounded-full bg-white"></button>
-              <button className="w-5 h-5 rounded-full border"></button>
-              <button className="w-5 h-5 rounded-full border"></button>
-              <button className="w-5 h-5 rounded-full border ml-auto"></button>
+              <button
+                className={twMerge(buttonClass, 'bg-white hover:bg-white/80')}
+              >
+                <Image src="/play_icon.svg" alt="play" width={8} height={8} />
+              </button>
+              <button className={secondaryButtonClass}>
+                <Image src="/plus.svg" alt="play" width={8} height={8} />
+              </button>
+              <button className={secondaryButtonClass}>
+                <Image src="/thumbs_up.svg" alt="play" width={8} height={8} />
+              </button>
+              <button className={twMerge(secondaryButtonClass, 'ml-auto')}>
+                <Image
+                  src="/chevron_down.svg"
+                  alt="show more"
+                  width={10}
+                  height={10}
+                />
+              </button>
             </div>
 
             <div className="flex gap-2 mb-2 items-center">
               <p className="font-medium text-green-400">93% match</p>
-              <p className="border border-neutral-200 px-1">18+</p>
+              <p className="border border-neutral-500 px-1">18+</p>
               <p>4 seasons</p>
             </div>
 
