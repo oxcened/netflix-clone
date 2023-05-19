@@ -1,0 +1,101 @@
+{
+  "header": {
+    "logo_url": "/header_logo.webp",
+    "background_url": "/header_background.webp",
+    "description": "Smart, sarcastic and a little dead inside, Wednesday Addams investigates a murder spree while making new friends — and foes — at Nevermore Academy."
+  },
+  "shows": [
+    {
+      "title": "Trending Now",
+      "content_urls": [
+        "/show_preview_1.webp",
+        "/show_preview_5.webp",
+        "/show_preview_2.webp",
+        "/show_preview_8.webp",
+        "/show_preview_3.webp",
+        "/show_preview_7.webp",
+        "/show_preview_6.webp",
+        "/show_preview_2.webp",
+        "/show_preview_7.webp",
+        "/show_preview_4.webp",
+        "/show_preview_3.webp",
+        "/show_preview_1.webp",
+        "/show_preview_5.webp",
+        "/show_preview_4.webp",
+        "/show_preview_6.webp",
+        "/show_preview_8.webp",
+        "/show_preview_1.webp",
+        "/show_preview_2.webp"
+      ]
+    },
+    {
+      "title": "TV Dramas",
+      "content_urls": [
+        "/show_preview_3.webp",
+        "/show_preview_6.webp",
+        "/show_preview_2.webp",
+        "/show_preview_4.webp",
+        "/show_preview_7.webp",
+        "/show_preview_1.webp",
+        "/show_preview_4.webp",
+        "/show_preview_1.webp",
+        "/show_preview_5.webp",
+        "/show_preview_6.webp",
+        "/show_preview_7.webp",
+        "/show_preview_8.webp",
+        "/show_preview_2.webp",
+        "/show_preview_5.webp",
+        "/show_preview_1.webp",
+        "/show_preview_8.webp",
+        "/show_preview_2.webp",
+        "/show_preview_3.webp"
+      ]
+    },
+    {
+      "title": "Casual Viewing",
+      "content_urls": [
+        "/show_preview_4.webp",
+        "/show_preview_5.webp",
+        "/show_preview_7.webp",
+        "/show_preview_2.webp",
+        "/show_preview_1.webp",
+        "/show_preview_6.webp",
+        "/show_preview_2.webp",
+        "/show_preview_5.webp",
+        "/show_preview_3.webp",
+        "/show_preview_8.webp",
+        "/show_preview_1.webp",
+        "/show_preview_6.webp",
+        "/show_preview_4.webp",
+        "/show_preview_7.webp",
+        "/show_preview_8.webp",
+        "/show_preview_3.webp",
+        "/show_preview_1.webp",
+        "/show_preview_2.webp"
+      ]
+    },
+    {
+      "title": "International TV Shows",
+      "content_urls": [
+        "/show_preview_1.webp",
+        "/show_preview_2.webp",
+        "/show_preview_3.webp",
+        "/show_preview_5.webp",
+        "/show_preview_6.webp",
+        "/show_preview_7.webp",
+        "/show_preview_8.webp",
+        "/show_preview_4.webp",
+        "/show_preview_2.webp",
+        "/show_preview_3.webp",
+        "/show_preview_4.webp",
+        "/show_preview_5.webp",
+        "/show_preview_1.webp",
+        "/show_preview_6.webp",
+        "/show_preview_7.webp",
+        "/show_preview_8.webp",
+        "/show_preview_1.webp",
+        "/show_preview_2.webp"
+      ]
+    }
+  ]
+}
