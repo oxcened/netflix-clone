@@ -3,10 +3,10 @@
 <h1>
 <img src="./logo.webp" alt="logo" height="100px"/>
 <br />
-Netflix Clone
+FlixClone
 </h1>
 
-This is a Netflix clone that I've built because reasons.
+A Netflix clone that I've built because reasons.
 
 [Demo](#demo) • [Key Features](#key-features) • [Tech Stack](#tech-stack) • [How to use](#run-on-your-machine) • [Maintainers](#maintainers) • [Credits](#credits) • [License](#license)
 
@@ -16,7 +16,13 @@ This is a Netflix clone that I've built because reasons.
 
 ## Demo
 
+### Try it out
+
 You can view the demo [here](https://flixclone-oxcened.vercel.app/).
+
+### Screenshots
+
+Coming soon!
 
 ## Key Features
 
