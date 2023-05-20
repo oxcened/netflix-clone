@@ -30,6 +30,7 @@ You can view the demo [here](https://flixclone-oxcened.vercel.app/).
 
 - Scroll to see the navbar background change.
 - Navigate through shows by clicking on the buttons to the edge of the screen.
+- Navigate through shows by dragging (only touch devices).
 - Hover on a show to get the details.
 - Dynamic data fetched from [public/home_mock.json](./public/home_mock.json).
 - Fully responsive.
