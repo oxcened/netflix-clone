@@ -89,10 +89,10 @@ export default function ShowModal({
                 <Image src="/play_icon.svg" alt="play" width={10} height={10} />
               </button>
               <button className={secondaryButtonClass}>
-                <Image src="/plus.svg" alt="play" width={12} height={12} />
+                <Image src="/plus.svg" alt="add to your library" width={12} height={12} />
               </button>
               <button className={secondaryButtonClass}>
-                <Image src="/thumbs_up.svg" alt="play" width={10} height={10} />
+                <Image src="/thumbs_up.svg" alt="like this show" width={10} height={10} />
               </button>
               <button className={twMerge(secondaryButtonClass, 'ml-auto')}>
                 <Image
