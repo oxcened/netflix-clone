@@ -43,7 +43,7 @@ export default function ShowModal({
   const left = (hoveredShowRect?.left ?? 0) + window.scrollX;
   const height = hoveredShowRect?.height;
   const width = hoveredShowRect?.width;
-  const buttonClass = 'w-5 h-5 rounded-full border grid place-content-center';
+  const buttonClass = 'w-6 h-6 rounded-full border grid place-content-center';
   const secondaryButtonClass = twMerge(
     buttonClass,
     'border-neutral-500 hover:border-neutral-200'
@@ -86,20 +86,20 @@ export default function ShowModal({
               <button
                 className={twMerge(buttonClass, 'bg-white hover:bg-white/80')}
               >
-                <Image src="/play_icon.svg" alt="play" width={8} height={8} />
+                <Image src="/play_icon.svg" alt="play" width={10} height={10} />
               </button>
               <button className={secondaryButtonClass}>
-                <Image src="/plus.svg" alt="play" width={8} height={8} />
+                <Image src="/plus.svg" alt="play" width={12} height={12} />
               </button>
               <button className={secondaryButtonClass}>
-                <Image src="/thumbs_up.svg" alt="play" width={8} height={8} />
+                <Image src="/thumbs_up.svg" alt="play" width={10} height={10} />
               </button>
               <button className={twMerge(secondaryButtonClass, 'ml-auto')}>
                 <Image
                   src="/chevron_down.svg"
                   alt="show more"
-                  width={10}
-                  height={10}
+                  width={12}
+                  height={12}
                 />
               </button>
             </div>
