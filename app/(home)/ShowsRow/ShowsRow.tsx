@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import useViewportWidth from '@/app/hooks/useViewportWidth';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NavButton } from '@/app/(home)/NavButton/NavButton';
+import useDragged, { UseDraggedParams } from '@/app/hooks/useDragged';
 
 function getSliderSize(width: number) {
   let size = 2;
@@ -35,6 +36,17 @@ export default function ShowsRow({
 }: ShowsRowProps) {
   const width = useViewportWidth();
   const [page, setPage] = useState(1);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const onTouchDrag: UseDraggedParams['onDragX'] = function (dir) {
+    if (dir === 'right' ? !canNext : !canPrev) return;
+    setPage((p) => p + (dir === 'right' ? 1 : -1));
+  };
+
+  useDragged({
+    element: sliderRef.current,
+    onDragX: onTouchDrag,
+  });
 
   useEffect(() => {
     // Width changes reflect on the size and length of pages so we better reset just to be safe.
@@ -70,7 +82,8 @@ export default function ShowsRow({
         )}
 
         <div
-          className="flex transition-transform duration-700"
+          ref={sliderRef}
+          className="flex transition-transform duration-700 touch-pan-y"
           style={{ transform: `translateX(${sliderTranslationPercentage}%)` }}
         >
           {content_urls.map((v, i) => (
