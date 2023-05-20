@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="px-[4%] py-20 lg:pt-0 bg-neutral-900 text-neutral-400 text-sm">
-      <div className="flex justify-between flex-col lg:flex-row gap-12 lg:gap-0">
+      <div className="flex justify-between flex-col md:flex-row gap-12 md:gap-0">
         <ul className="space-y-2">
           <li>
             <a href="#">Audio Description</a>
@@ -51,7 +51,7 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div className="mt-14 flex flex-col lg:flex-row justify-between gap-4 lg:gap-0">
+      <div className="mt-14 flex flex-col md:flex-row justify-between gap-4 md:gap-0">
         <p>
           Made with ❤️ by&nbsp;
           <a
