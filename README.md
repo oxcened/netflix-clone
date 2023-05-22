@@ -6,7 +6,7 @@
 FlixClone
 </h1>
 
-A Netflix clone that I've built because reasons.
+Not your usual Netflix clone.
 
 [Demo](#demo) • [Key Features](#key-features) • [Tech Stack](#tech-stack) • [How to use](#run-on-your-machine) • [Maintainers](#maintainers) • [Credits](#credits) • [License](#license)
 
