@@ -78,28 +78,28 @@ export default function ShowModal({
 
           <div
             className={twMerge(
-              'bg-neutral-900 text-neutral-200 text-[0.6rem] p-4 rounded-b-[4px] transition-opacity duration-200 shadow-md shadow-black/50',
+              'bg-neutral-900 text-neutral-200 text-[0.7rem] p-4 rounded-b-[4px] transition-opacity duration-200 shadow-md shadow-black/50',
               bodyAnimationClasses[state]
             )}
           >
-            <div className="flex gap-2 mb-4">
+            <div className="flex gap-1.5 mb-3">
               <button
                 className={twMerge(buttonClass, 'bg-white hover:bg-white/80')}
               >
-                <Image src="/play_icon.svg" alt="play" width={10} height={10} />
+                <Image src="/play_icon.svg" alt="play" width={12} height={12} />
               </button>
               <button className={secondaryButtonClass}>
-                <Image src="/plus.svg" alt="play" width={12} height={12} />
+                <Image src="/plus.svg" alt="play" width={14} height={14} />
               </button>
               <button className={secondaryButtonClass}>
-                <Image src="/thumbs_up.svg" alt="play" width={10} height={10} />
+                <Image src="/thumbs_up.svg" alt="play" width={11} height={11} />
               </button>
               <button className={twMerge(secondaryButtonClass, 'ml-auto')}>
                 <Image
                   src="/chevron_down.svg"
                   alt="show more"
-                  width={12}
-                  height={12}
+                  width={16}
+                  height={16}
                 />
               </button>
             </div>
