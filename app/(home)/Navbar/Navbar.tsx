@@ -43,15 +43,20 @@ export default function Navbar() {
           </li>
 
           <li className="ml-auto">
-            <button>Search</button>
+            <button>
+              <Image height={24} width={24} src="/search.svg" alt="Search" />
+            </button>
           </li>
 
           <li>
-            <a href="#">Kids</a>
-          </li>
-
-          <li>
-            <button>Notifications</button>
+            <button>
+              <Image
+                height={24}
+                width={24}
+                src="/notification.svg"
+                alt="Notifications"
+              />
+            </button>
           </li>
 
           <li>
@@ -75,7 +80,9 @@ export default function Navbar() {
           </li>
 
           <li className="ml-auto">
-            <button>Search</button>
+            <button>
+              <Image height={24} width={24} src="/search.svg" alt="Search" />
+            </button>
           </li>
 
           <li>
