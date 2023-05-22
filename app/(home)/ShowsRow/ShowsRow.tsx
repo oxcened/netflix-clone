@@ -72,7 +72,7 @@ export default function ShowsRow({
     <section>
       <h2 className="font-medium text-neutral-200 text-lg px-[4%]">{title}</h2>
 
-      <div className="mt-2 overflow-hidden px-[4%] relative">
+      <div className="mt-2 overflow-hidden px-[4%] relative group/row">
         {(canPrev || isTransitioning) && (
           <NavButton
             dir="left"

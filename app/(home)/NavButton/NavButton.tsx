@@ -17,7 +17,7 @@ export function NavButton({ dir, invisible, onClick }: NavButtonProps) {
   return (
     <button
       className={twMerge(
-        'group absolute bg-black/50 z-10 top-0 bottom-0 w-[calc(4%-0.2rem)] grid place-content-center',
+        'group/button absolute bg-black/50 hover:bg-black/70 z-10 top-0 bottom-0 w-[calc(4%-0.2rem)] grid place-content-center transition-colors',
         dir === 'right' && 'right-0 rounded-l-[4px]',
         dir === 'left' && 'left-0 rounded-r-[4px]',
         invisible && 'opacity-0 cursor-default'
@@ -25,11 +25,10 @@ export function NavButton({ dir, invisible, onClick }: NavButtonProps) {
       onClick={click}
     >
       <Image
+        fill
         src={`/chevron_${dir}.svg`}
-        width={35}
-        height={35}
         alt={`Navigate ${dir}`}
-        className="hidden group-hover:block"
+        className="hidden group-hover/row:block group-hover/button:scale-125 transition-transform"
       />
     </button>
   );
