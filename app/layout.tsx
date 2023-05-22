@@ -2,7 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'FlixClone',
-  description: 'Yet another Netflix Clone',
+  description: 'Not your usual Netflix clone',
 };
 
 export default function RootLayout({
