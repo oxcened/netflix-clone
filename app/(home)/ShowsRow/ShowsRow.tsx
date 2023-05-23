@@ -95,10 +95,10 @@ export default function ShowsRow({
             >
               <div className="relative aspect-video">
                 <Image
+                  fill
                   src={v}
                   alt="show"
                   className="rounded-[4px]"
-                  fill={true}
                   onMouseEnter={({ target }) =>
                     onShowMouseEnter?.(target as HTMLImageElement, v)
                   }

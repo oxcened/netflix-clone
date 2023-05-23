@@ -69,10 +69,10 @@ export default function ShowModal({
         >
           <div className="relative aspect-video">
             <Image
+              fill
               src={hoveredShow![1]}
               alt="show"
               className="rounded-t-[4px]"
-              fill={true}
             />
           </div>
 
