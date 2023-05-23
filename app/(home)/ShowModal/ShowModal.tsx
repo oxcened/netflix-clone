@@ -3,6 +3,7 @@ import { Transition } from 'react-transition-group';
 import { twMerge } from 'tailwind-merge';
 import Image from 'next/image';
 import { useRef } from 'react';
+import { RowPosition } from '@/app/(home)/ShowsRow/ShowsRow';
 
 const modalAnimationClasses = {
   entering: 'scale-150 -translate-y-16',
@@ -20,10 +21,16 @@ const bodyAnimationClasses = {
   unmounted: '',
 };
 
+const rowPositionToOriginClass: Record<RowPosition, string> = {
+  first: 'origin-left',
+  last: 'origin-right',
+  middle: '',
+};
+
 export type ShowModalProps = {
   isOpen?: boolean;
-  // [img element of the preview, URL source of the preview image]
-  hoveredShow?: [HTMLImageElement, string];
+  // [img element of the preview, URL source of the preview image, offset of the preview]
+  hoveredShow?: [HTMLImageElement, string, RowPosition];
   onMouseLeave?: () => void;
 };
 
@@ -43,7 +50,9 @@ export default function ShowModal({
   const left = (hoveredShowRect?.left ?? 0) + window.scrollX;
   const height = hoveredShowRect?.height;
   const width = hoveredShowRect?.width;
+  const position = hoveredShow?.[2];
   const buttonClass = 'w-6 h-6 rounded-full border grid place-content-center';
+
   const secondaryButtonClass = twMerge(
     buttonClass,
     'border-neutral-500 hover:border-neutral-200'
@@ -62,7 +71,8 @@ export default function ShowModal({
           ref={ref}
           className={twMerge(
             'hidden lg:block absolute z-20 transition-transform cursor-pointer duration-200',
-            modalAnimationClasses[state]
+            modalAnimationClasses[state],
+            rowPositionToOriginClass[position!]
           )}
           style={{ top, left, height, width }}
           onMouseLeave={onMouseLeave}
@@ -89,10 +99,20 @@ export default function ShowModal({
                 <Image src="/play_icon.svg" alt="play" width={12} height={12} />
               </button>
               <button className={secondaryButtonClass}>
-                <Image src="/plus.svg" alt="add to your library" width={14} height={14} />
+                <Image
+                  src="/plus.svg"
+                  alt="add to your library"
+                  width={14}
+                  height={14}
+                />
               </button>
               <button className={secondaryButtonClass}>
-                <Image src="/thumbs_up.svg" alt="like this show" width={11} height={11} />
+                <Image
+                  src="/thumbs_up.svg"
+                  alt="like this show"
+                  width={11}
+                  height={11}
+                />
               </button>
               <button className={twMerge(secondaryButtonClass, 'ml-auto')}>
                 <Image

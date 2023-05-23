@@ -1,6 +1,9 @@
 'use client';
 
-import ShowsRow, { ShowsRowProps } from '@/app/(home)/ShowsRow/ShowsRow';
+import ShowsRow, {
+  RowPosition,
+  ShowsRowProps,
+} from '@/app/(home)/ShowsRow/ShowsRow';
 import ShowModal from '@/app/(home)/ShowModal/ShowModal';
 import { useRef, useState } from 'react';
 
@@ -14,15 +17,17 @@ export type ShowsProps = {
 export default function ShowsRows({ data }: ShowsProps) {
   const openModalTimeout = useRef<number>();
   const [isModalOpen, setModalOpen] = useState(false);
-  const [hoveredShow, setHoveredShow] = useState<[HTMLImageElement, string]>();
+  const [hoveredShow, setHoveredShow] =
+    useState<[HTMLImageElement, string, RowPosition]>();
 
   const openModal: ShowsRowProps['onShowMouseEnter'] = function (
     element,
-    previewUrl
+    previewUrl,
+    rowPosition
   ) {
     openModalTimeout.current = window.setTimeout(() => {
       openModalTimeout.current = undefined;
-      setHoveredShow([element, previewUrl]);
+      setHoveredShow([element, previewUrl, rowPosition]);
       setModalOpen(true);
     }, 500);
   };

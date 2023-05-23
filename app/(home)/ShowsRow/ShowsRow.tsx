@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { NavButton } from '@/app/(home)/NavButton/NavButton';
 import useDragged, { UseDraggedParams } from '@/app/hooks/useDragged';
 
+export type RowPosition = 'first' | 'middle' | 'last';
+
 function getSliderSize(width: number) {
   let size = 2;
 
@@ -25,7 +27,11 @@ export type ShowsRowProps = {
     title: string;
     content_urls: string[];
   };
-  onShowMouseEnter?: (element: HTMLImageElement, previewUrl: string) => void;
+  onShowMouseEnter?: (
+    element: HTMLImageElement,
+    previewUrl: string,
+    rowPosition: RowPosition
+  ) => void;
   onShowMouseLeave?: (element: HTMLImageElement, previewUrl: string) => void;
 };
 
@@ -60,6 +66,18 @@ export default function ShowsRow({
     const timeout = window.setTimeout(() => setTransitioning(false), 700);
     return () => window.clearTimeout(timeout);
   }, [page]);
+
+  function getRowPosition(index: number): RowPosition {
+    const offset = index % size;
+
+    if (offset === 0) {
+      return 'first';
+    } else if (offset === size - 1) {
+      return 'last';
+    } else {
+      return 'middle';
+    }
+  }
 
   const size = getSliderSize(width);
   const pages = content_urls.length / size;
@@ -100,7 +118,11 @@ export default function ShowsRow({
                   alt="show"
                   className="rounded-[4px]"
                   onMouseEnter={({ target }) =>
-                    onShowMouseEnter?.(target as HTMLImageElement, v)
+                    onShowMouseEnter?.(
+                      target as HTMLImageElement,
+                      v,
+                      getRowPosition(i)
+                    )
                   }
                   onMouseLeave={({ target }) =>
                     onShowMouseLeave?.(target as HTMLImageElement, v)
