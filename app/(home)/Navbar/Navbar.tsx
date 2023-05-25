@@ -3,9 +3,38 @@
 import Image from 'next/image';
 import useScrolled from '@/app/hooks/useScrolled';
 import { twMerge } from 'tailwind-merge';
+import { Profile } from '@/app/(home)/Profile';
 
-export default function Navbar() {
+export type NavbarProps = {
+  profile?: Profile;
+};
+
+export default function Navbar({ profile }: NavbarProps) {
   const isScrolled = useScrolled();
+
+  const home = (
+    <a href="#" className="font-medium">
+      Home
+    </a>
+  );
+
+  const search = (
+    <button>
+      <Image height={24} width={24} src="/search.svg" alt="Search" />
+    </button>
+  );
+
+  const avatar = (
+    <button>
+      <Image
+        src={profile!.imageUrl}
+        alt={profile!.name}
+        height={30}
+        width={30}
+        className="rounded-sm"
+      />
+    </button>
+  );
 
   return (
     <nav
@@ -16,15 +45,11 @@ export default function Navbar() {
     >
       <div className="px-[4%] py-3 flex items-center gap-5 sm:gap-7 md:gap-10">
         <a href="#">
-          <Image src="/logo.svg" alt="User avatar" height={30} width={92} />
+          <Image src="/logo.svg" alt="Logo" height={30} width={92} />
         </a>
 
         <ul className="gap-5 text-white items-center text-sm font-light flex-1 hidden lg:flex">
-          <li>
-            <a href="#" className="font-medium">
-              Home
-            </a>
-          </li>
+          <li>{home}</li>
 
           <li>
             <a href="#">TV Shows</a>
@@ -42,11 +67,7 @@ export default function Navbar() {
             <a href="#">Browse by Languages</a>
           </li>
 
-          <li className="ml-auto">
-            <button>
-              <Image height={24} width={24} src="/search.svg" alt="Search" />
-            </button>
-          </li>
+          <li className="ml-auto">{search}</li>
 
           <li>
             <button>
@@ -59,43 +80,15 @@ export default function Navbar() {
             </button>
           </li>
 
-          <li>
-            <button>
-              <Image
-                src="/avatar.png"
-                alt="User avatar"
-                height={30}
-                width={30}
-                className="rounded-sm"
-              />
-            </button>
-          </li>
+          <li>{avatar}</li>
         </ul>
 
         <ul className="gap-5 text-white items-center text-sm font-light flex-1 flex lg:hidden">
-          <li>
-            <a href="#" className="font-medium">
-              Home
-            </a>
-          </li>
+          <li>{home}</li>
 
-          <li className="ml-auto">
-            <button>
-              <Image height={24} width={24} src="/search.svg" alt="Search" />
-            </button>
-          </li>
+          <li className="ml-auto">{search}</li>
 
-          <li>
-            <button>
-              <Image
-                src="/avatar.png"
-                alt="User avatar"
-                height={30}
-                width={30}
-                className="rounded-sm"
-              />
-            </button>
-          </li>
+          <li>{avatar}</li>
         </ul>
       </div>
     </nav>
