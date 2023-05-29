@@ -66,7 +66,7 @@ export default function ChooseProfile(props: PropsWithChildren) {
   }
 
   const children = Children.map(props.children, (child) => {
-    if (isValidElement<BrowseProps>(child) && child.type) {
+    if (isValidElement<BrowseProps>(child)) {
       return cloneElement(child, { profile });
     }
 
