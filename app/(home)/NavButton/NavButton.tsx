@@ -17,7 +17,7 @@ export function NavButton({ dir, invisible, onClick }: NavButtonProps) {
   return (
     <button
       className={twMerge(
-        'group/button absolute bg-black/50 hover:bg-black/70 z-10 top-0 bottom-0 w-[calc(4%-0.2rem)] grid place-content-center transition-colors',
+        'group/button absolute bg-neutral-900/50 hover:bg-neutral-900/70 z-10 top-0 bottom-0 w-[calc(4%-0.2rem)] grid place-content-center transition-colors',
         dir === 'right' && 'right-0 rounded-l-[4px]',
         dir === 'left' && 'left-0 rounded-r-[4px]',
         invisible && 'opacity-0 cursor-default'

@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { NavButton } from '@/app/(home)/NavButton/NavButton';
 import useDragged, { UseDraggedParams } from '@/app/hooks/useDragged';
 import { Profile } from '@/app/(home)/Profile';
+import { ShowRow } from '@/app/(home)/Show';
+import Show from '@/app/(home)/Show/Show';
 
 export type RowPosition = 'first' | 'middle' | 'last';
 
@@ -24,27 +26,24 @@ function getSliderSize(width: number) {
 }
 
 export type ShowsRowProps = {
-  data: {
-    title: string;
-    content_urls: string[];
-  };
+  data: ShowRow;
   onShowMouseEnter?: (
-    element: HTMLImageElement,
+    element: HTMLDivElement,
     previewUrl: string,
     rowPosition: RowPosition
   ) => void;
-  onShowMouseLeave?: (element: HTMLImageElement, previewUrl: string) => void;
+  onShowMouseLeave?: (element: HTMLDivElement) => void;
   profile: Profile;
 };
 
 export default function ShowsRow({
-  data: { title, content_urls },
+  data: { title, shows, is_numbered },
   profile,
   onShowMouseEnter,
   onShowMouseLeave,
 }: ShowsRowProps) {
   const width = useViewportWidth();
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(is_numbered ? 0 : 1);
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const onTouchDrag: UseDraggedParams['onDragX'] = function (dir) {
@@ -59,16 +58,8 @@ export default function ShowsRow({
 
   useEffect(() => {
     // Width changes reflect on the size and length of pages so we better reset just to be safe.
-    setPage(1);
+    setPage(is_numbered ? 0 : 1);
   }, [width]);
-
-  const [isTransitioning, setTransitioning] = useState(false);
-
-  useEffect(() => {
-    setTransitioning(true);
-    const timeout = window.setTimeout(() => setTransitioning(false), 700);
-    return () => window.clearTimeout(timeout);
-  }, [page]);
 
   function getRowPosition(index: number): RowPosition {
     const offset = index % size;
@@ -83,7 +74,7 @@ export default function ShowsRow({
   }
 
   const size = getSliderSize(width);
-  const pages = content_urls.length / size;
+  const pages = shows.length / size;
   const canPrev = page > 0;
   const canNext = page < pages - 1;
   const sliderTranslationPercentage = -page * 100;
@@ -97,55 +88,44 @@ export default function ShowsRow({
       </h2>
 
       <div className="mt-2 overflow-hidden px-[4%] relative group/row">
-        {(canPrev || isTransitioning) && (
-          <NavButton
-            dir="left"
-            invisible={!canPrev && isTransitioning}
-            onClick={() => setPage((p) => p - 1)}
-          />
-        )}
+        <NavButton
+          dir="left"
+          invisible={!canPrev}
+          onClick={() => setPage((p) => p - 1)}
+        />
 
         <div
           ref={sliderRef}
           className="flex transition-transform duration-700 touch-pan-y"
           style={{ transform: `translateX(${sliderTranslationPercentage}%)` }}
         >
-          {content_urls.map((v, i) => (
-            <div
-              // List is not getting reordered so the index is just fine
+          {shows.map((show, i) => (
+            // List is not getting reordered so the index is just fine
+            <Show
               key={i}
-              className="flex-shrink-0 px-[0.2rem] cursor-pointer"
-              style={{ width: `${showWidthPercentage}%` }}
-            >
-              <div className="relative aspect-video">
-                <Image
-                  fill
-                  src={v}
-                  alt="show"
-                  className="rounded-[4px]"
-                  onMouseEnter={({ target }) =>
-                    onShowMouseEnter?.(
-                      target as HTMLImageElement,
-                      v,
-                      getRowPosition(i)
-                    )
-                  }
-                  onMouseLeave={({ target }) =>
-                    onShowMouseLeave?.(target as HTMLImageElement, v)
-                  }
-                />
-              </div>
-            </div>
+              show={show}
+              widthPercentage={showWidthPercentage}
+              isNumbered={is_numbered}
+              index={i + 1}
+              onMouseEnter={({ target }) =>
+                onShowMouseEnter?.(
+                  target as HTMLDivElement,
+                  show.horizontal_image,
+                  getRowPosition(i)
+                )
+              }
+              onMouseLeave={({ target }) =>
+                onShowMouseLeave?.(target as HTMLDivElement)
+              }
+            />
           ))}
         </div>
 
-        {(canNext || isTransitioning) && (
-          <NavButton
-            dir="right"
-            invisible={!canNext && isTransitioning}
-            onClick={() => setPage((p) => p + 1)}
-          />
-        )}
+        <NavButton
+          dir="right"
+          invisible={!canNext}
+          onClick={() => setPage((p) => p + 1)}
+        />
       </div>
     </section>
   );

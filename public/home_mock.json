@@ -7,71 +7,225 @@
   "shows": [
     {
       "title": "Top Picks for {{name}}",
-      "content_urls": [
-        "/shows/mare_fuori.webp",
-        "/shows/queen_charlotte.jpg",
-        "/shows/rookie.webp",
-        "/shows/sweet_tooth.jpg",
-        "/shows/wednesday.jpg",
-        "/shows/xo_kitty.jpg",
-        "/shows/the_mother.jpg",
-        "/shows/smurfs.webp",
-        "/shows/firefly_lane.jpg",
-        "/shows/the_bfg.webp",
-        "/shows/stranger_things.jpg",
-        "/shows/teen_titans_go.webp",
-        "/shows/bridgerton.jpg",
-        "/shows/black_knight.jpg",
-        "/shows/cobra_kai.jpg",
-        "/shows/jumanji.webp",
-        "/shows/workin_moms.jpg",
-        "/shows/spongebob.webp"
+      "shows": [
+        {
+          "horizontal_image": "/images/mare_fuori.webp"
+        },
+        {
+          "horizontal_image": "/images/queen_charlotte.jpg"
+        },
+        {
+          "horizontal_image": "/images/the_rookie.webp"
+        },
+        {
+          "horizontal_image": "/images/sweet_tooth.jpg"
+        },
+        {
+          "horizontal_image": "/images/wednesday.jpg"
+        },
+        {
+          "horizontal_image": "/images/xo_kitty.jpg"
+        },
+        {
+          "horizontal_image": "/images/the_mother.jpg"
+        },
+        {
+          "horizontal_image": "/images/smurfs.webp"
+        },
+        {
+          "horizontal_image": "/images/firefly_lane.jpg"
+        },
+        {
+          "horizontal_image": "/images/the_bfg.webp"
+        },
+        {
+          "horizontal_image": "/images/stranger_things.jpg"
+        },
+        {
+          "horizontal_image": "/images/teen_titans_go.webp"
+        },
+        {
+          "horizontal_image": "/images/bridgerton.jpg"
+        },
+        {
+          "horizontal_image": "/images/black_knight.jpg"
+        },
+        {
+          "horizontal_image": "/images/cobra_kai.jpg"
+        },
+        {
+          "horizontal_image": "/images/jumanji.webp"
+        },
+        {
+          "horizontal_image": "/images/workin_moms.jpg"
+        },
+        {
+          "horizontal_image": "/images/spongebob.webp"
+        }
       ]
     },
     {
+      "title": "Top 10 TV Shows in Italy Today",
+      "shows": [
+        {
+          "vertical_image": "/images/fubar_vertical.jpg",
+          "horizontal_image": "/images/fubar.jpg"
+        },
+        {
+          "vertical_image": "/images/muted_vertical.jpg",
+          "horizontal_image": "/images/muted.jpg"
+        },
+        {
+          "vertical_image": "/images/queen_charlotte_vertical.jpg",
+          "horizontal_image": "/images/queen_charlotte.jpg"
+        },
+        {
+          "vertical_image": "/images/xo_kitty_vertical.jpg",
+          "horizontal_image": "/images/xo_kitty.jpg"
+        },
+        {
+          "vertical_image": "/images/firefly_lane_vertical.jpg",
+          "horizontal_image": "/images/firefly_lane.jpg"
+        },
+        {
+          "vertical_image": "/images/bridgerton_vertical.jpg",
+          "horizontal_image": "/images/bridgerton.jpg"
+        },
+        {
+          "vertical_image": "/images/the_rookie_vertical.webp",
+          "horizontal_image": "/images/the_rookie.webp"
+        },
+        {
+          "vertical_image": "/images/turn_of_the_tide_vertical.jpg",
+          "horizontal_image": "/images/turn_of_the_tide.jpeg"
+        },
+        {
+          "vertical_image": "/images/the_marked_heart_vertical.jpeg",
+          "horizontal_image": "/images/the_marked_heart.jpg"
+        },
+        {
+          "vertical_image": "/images/mare_fuori_vertical.webp",
+          "horizontal_image": "/images/mare_fuori.webp"
+        }
+      ],
+      "is_numbered": true
+    },
+    {
       "title": "Trending Now",
-      "content_urls": [
-        "/shows/cocomelon.jpg",
-        "/shows/fubar.jpg",
-        "/shows/harry_potter.webp",
-        "/shows/the_marked_heart.jpg",
-        "/shows/the_mother.jpg",
-        "/shows/the_good_doctor.webp",
-        "/shows/paw_patrol.webp",
-        "/shows/lucifer.jpg",
-        "/shows/masha_and_the_bear.webp",
-        "/shows/jurassic_world.jpg",
-        "/shows/pokemon_journeys.webp",
-        "/shows/h2o.webp",
-        "/shows/doctor_cha.jpg",
-        "/shows/breaking_bad.webp",
-        "/shows/muted.jpg",
-        "/shows/jojo.jpg",
-        "/shows/trolls.webp",
-        "/shows/suits.webp"
+      "shows": [
+        {
+          "horizontal_image": "/images/cocomelon.jpg"
+        },
+        {
+          "horizontal_image": "/images/fubar.jpg"
+        },
+        {
+          "horizontal_image": "/images/harry_potter.webp"
+        },
+        {
+          "horizontal_image": "/images/the_marked_heart.jpg"
+        },
+        {
+          "horizontal_image": "/images/the_mother.jpg"
+        },
+        {
+          "horizontal_image": "/images/the_good_doctor.webp"
+        },
+        {
+          "horizontal_image": "/images/paw_patrol.webp"
+        },
+        {
+          "horizontal_image": "/images/lucifer.jpg"
+        },
+        {
+          "horizontal_image": "/images/masha_and_the_bear.webp"
+        },
+        {
+          "horizontal_image": "/images/jurassic_world.jpg"
+        },
+        {
+          "horizontal_image": "/images/pokemon_journeys.webp"
+        },
+        {
+          "horizontal_image": "/images/h2o.webp"
+        },
+        {
+          "horizontal_image": "/images/doctor_cha.jpg"
+        },
+        {
+          "horizontal_image": "/images/breaking_bad.webp"
+        },
+        {
+          "horizontal_image": "/images/muted.jpg"
+        },
+        {
+          "horizontal_image": "/images/jojo.jpg"
+        },
+        {
+          "horizontal_image": "/images/trolls.webp"
+        },
+        {
+          "horizontal_image": "/images/suits.webp"
+        }
       ]
     },
     {
       "title": "Young Adult Movies & Shows",
-      "content_urls": [
-        "/shows/friends.webp",
-        "/shows/never_have_i_ever.jpg",
-        "/shows/outer_banks.jpg",
-        "/shows/riverdale.webp",
-        "/shows/stranger_things.jpg",
-        "/shows/diaries.jpg",
-        "/shows/ginny_and_georgia.jpg",
-        "/shows/the_100.webp",
-        "/shows/gilmore_girls.webp",
-        "/shows/lost_in_space.jpg",
-        "/shows/all_of_us_are_dead.jpg",
-        "/shows/elite.jpg",
-        "/shows/anne.jpg",
-        "/shows/sex_education.jpg",
-        "/shows/shadow_hunters.jpg",
-        "/shows/hard_feelings.jpg",
-        "/shows/8_mile.webp",
-        "/shows/spiderman_no_way_home.webp"
+      "shows": [
+        {
+          "horizontal_image": "/images/friends.webp"
+        },
+        {
+          "horizontal_image": "/images/never_have_i_ever.jpg"
+        },
+        {
+          "horizontal_image": "/images/outer_banks.jpg"
+        },
+        {
+          "horizontal_image": "/images/riverdale.webp"
+        },
+        {
+          "horizontal_image": "/images/stranger_things.jpg"
+        },
+        {
+          "horizontal_image": "/images/diaries.jpg"
+        },
+        {
+          "horizontal_image": "/images/ginny_and_georgia.jpg"
+        },
+        {
+          "horizontal_image": "/images/the_100.webp"
+        },
+        {
+          "horizontal_image": "/images/gilmore_girls.webp"
+        },
+        {
+          "horizontal_image": "/images/lost_in_space.jpg"
+        },
+        {
+          "horizontal_image": "/images/all_of_us_are_dead.jpg"
+        },
+        {
+          "horizontal_image": "/images/elite.jpg"
+        },
+        {
+          "horizontal_image": "/images/anne.jpg"
+        },
+        {
+          "horizontal_image": "/images/sex_education.jpg"
+        },
+        {
+          "horizontal_image": "/images/shadow_hunters.jpg"
+        },
+        {
+          "horizontal_image": "/images/hard_feelings.jpg"
+        },
+        {
+          "horizontal_image": "/images/8_mile.webp"
+        },
+        {
+          "horizontal_image": "/images/spiderman_no_way_home.webp"
+        }
       ]
     }
   ]

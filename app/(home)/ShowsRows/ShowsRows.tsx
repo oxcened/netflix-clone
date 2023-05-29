@@ -7,12 +7,10 @@ import ShowsRow, {
 import ShowModal from '@/app/(home)/ShowModal/ShowModal';
 import { useRef, useState } from 'react';
 import { Profile } from '@/app/(home)/Profile';
+import { ShowRow } from '@/app/(home)/Show';
 
 export type ShowsProps = {
-  data: {
-    title: string;
-    content_urls: string[];
-  }[];
+  data: ShowRow[];
   profile: Profile;
 };
 
@@ -20,7 +18,7 @@ export default function ShowsRows({ data, profile }: ShowsProps) {
   const openModalTimeout = useRef<number>();
   const [isModalOpen, setModalOpen] = useState(false);
   const [hoveredShow, setHoveredShow] =
-    useState<[HTMLImageElement, string, RowPosition]>();
+    useState<[HTMLDivElement, string, RowPosition]>();
 
   const openModal: ShowsRowProps['onShowMouseEnter'] = function (
     element,

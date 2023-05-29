@@ -30,7 +30,7 @@ const rowPositionToOriginClass: Record<RowPosition, string> = {
 export type ShowModalProps = {
   isOpen?: boolean;
   // [img element of the preview, URL source of the preview image, offset of the preview]
-  hoveredShow?: [HTMLImageElement, string, RowPosition];
+  hoveredShow?: [HTMLDivElement, string, RowPosition];
   onMouseLeave?: () => void;
 };
 
