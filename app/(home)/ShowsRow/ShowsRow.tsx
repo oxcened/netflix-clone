@@ -3,6 +3,7 @@ import useViewportWidth from '@/app/hooks/useViewportWidth';
 import { useEffect, useRef, useState } from 'react';
 import { NavButton } from '@/app/(home)/NavButton/NavButton';
 import useDragged, { UseDraggedParams } from '@/app/hooks/useDragged';
+import { Profile } from '@/app/(home)/Profile';
 
 export type RowPosition = 'first' | 'middle' | 'last';
 
@@ -33,10 +34,12 @@ export type ShowsRowProps = {
     rowPosition: RowPosition
   ) => void;
   onShowMouseLeave?: (element: HTMLImageElement, previewUrl: string) => void;
+  profile: Profile;
 };
 
 export default function ShowsRow({
   data: { title, content_urls },
+  profile,
   onShowMouseEnter,
   onShowMouseLeave,
 }: ShowsRowProps) {
@@ -85,10 +88,13 @@ export default function ShowsRow({
   const canNext = page < pages - 1;
   const sliderTranslationPercentage = -page * 100;
   const showWidthPercentage = (1 / size) * 100;
+  const mappedTitle = title.replace('{{name}}', profile.name);
 
   return (
     <section>
-      <h2 className="font-medium text-neutral-200 text-lg px-[4%]">{title}</h2>
+      <h2 className="font-medium text-neutral-200 text-lg px-[4%]">
+        {mappedTitle}
+      </h2>
 
       <div className="mt-2 overflow-hidden px-[4%] relative group/row">
         {(canPrev || isTransitioning) && (

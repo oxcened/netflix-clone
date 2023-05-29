@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
 import { Profile } from '@/app/(home)/Profile';
 
 export type NavbarProps = {
-  profile?: Profile;
+  profile: Profile;
 };
 
 export default function Navbar({ profile }: NavbarProps) {
@@ -27,8 +27,8 @@ export default function Navbar({ profile }: NavbarProps) {
   const avatar = (
     <button>
       <Image
-        src={profile!.imageUrl}
-        alt={profile!.name}
+        src={profile.imageUrl}
+        alt={profile.name}
         height={30}
         width={30}
         className="rounded-sm"
@@ -85,9 +85,7 @@ export default function Navbar({ profile }: NavbarProps) {
 
         <ul className="gap-5 text-white items-center text-sm font-light flex-1 flex lg:hidden">
           <li>{home}</li>
-
           <li className="ml-auto">{search}</li>
-
           <li>{avatar}</li>
         </ul>
       </div>

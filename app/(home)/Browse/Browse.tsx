@@ -9,12 +9,17 @@ export type BrowseProps = {
   profile?: Profile;
 };
 
-export default function Browse({ profile }: BrowseProps) {
+export default function Browse({
+  profile = {
+    name: 'Guest',
+    imageUrl: '/avatar.png',
+  },
+}: BrowseProps) {
   return (
     <>
       <Navbar profile={profile} />
       <Header data={data.header} />
-      <ShowsRows data={data.shows} />
+      <ShowsRows data={data.shows} profile={profile} />
       <Footer />
     </>
   );

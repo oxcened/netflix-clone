@@ -6,15 +6,17 @@ import ShowsRow, {
 } from '@/app/(home)/ShowsRow/ShowsRow';
 import ShowModal from '@/app/(home)/ShowModal/ShowModal';
 import { useRef, useState } from 'react';
+import { Profile } from '@/app/(home)/Profile';
 
 export type ShowsProps = {
   data: {
     title: string;
     content_urls: string[];
   }[];
+  profile: Profile;
 };
 
-export default function ShowsRows({ data }: ShowsProps) {
+export default function ShowsRows({ data, profile }: ShowsProps) {
   const openModalTimeout = useRef<number>();
   const [isModalOpen, setModalOpen] = useState(false);
   const [hoveredShow, setHoveredShow] =
@@ -50,6 +52,7 @@ export default function ShowsRows({ data }: ShowsProps) {
           <ShowsRow
             key={v.title}
             data={v}
+            profile={profile}
             onShowMouseEnter={openModal}
             onShowMouseLeave={cancelTimer}
           />
