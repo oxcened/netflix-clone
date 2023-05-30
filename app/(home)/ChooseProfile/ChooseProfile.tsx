@@ -44,7 +44,8 @@ export default function ChooseProfile(props: PropsWithChildren) {
 
   if (!profile) {
     return (
-      <div className="min-h[100svh] min-h-screen grid place-content-center grid-cols-1 px-4">
+      // Two height rules on purpose so that browsers not supporting svh apply the second rule
+      <div className="min-h-[100svh] min-h-screen grid place-content-center grid-cols-1 px-4">
         <div className="mx-auto w-full max-w-xs flex flex-col">
           <h1 className="text-neutral-200 text-3xl lg:text-4xl text-center">
             Who&apos;s watching?
