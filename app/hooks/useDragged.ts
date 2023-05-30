@@ -1,17 +1,22 @@
-import { useEffect, useRef } from 'react';
+import { RefObject, useEffect, useRef } from 'react';
 
 const minimumDragPx = 50;
 
-export type UseDraggedParams = {
-  element?: HTMLElement | null;
+export type UseDraggedParams<T extends HTMLElement> = {
+  element: RefObject<T>;
   onDragX?: (dir: 'left' | 'right') => void;
 };
 
-export default function useDragged({ element, onDragX }: UseDraggedParams) {
+export default function useDragged<T extends HTMLElement>({
+  element,
+  onDragX,
+}: UseDraggedParams<T>) {
   const startX = useRef<number>();
 
   useEffect(() => {
-    if (!element) {
+    const currentElement = element.current;
+
+    if (!currentElement) {
       return;
     }
 
@@ -39,12 +44,12 @@ export default function useDragged({ element, onDragX }: UseDraggedParams) {
       startX.current = undefined;
     }
 
-    element.addEventListener('touchstart', start);
-    element.addEventListener('touchend', end);
+    currentElement.addEventListener('touchstart', start);
+    currentElement.addEventListener('touchend', end);
 
     return () => {
-      element.removeEventListener('touchstart', start);
-      element.removeEventListener('touchend', end);
+      currentElement.removeEventListener('touchstart', start);
+      currentElement.removeEventListener('touchend', end);
     };
   }, [element, onDragX]);
 }

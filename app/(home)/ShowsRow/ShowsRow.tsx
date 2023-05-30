@@ -46,13 +46,13 @@ export default function ShowsRow({
   const [page, setPage] = useState(is_numbered ? 0 : 1);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const onTouchDrag: UseDraggedParams['onDragX'] = function (dir) {
+  const onTouchDrag: UseDraggedParams<HTMLDivElement>['onDragX'] = function (dir) {
     if (dir === 'right' ? !canNext : !canPrev) return;
     setPage((p) => p + (dir === 'right' ? 1 : -1));
   };
 
   useDragged({
-    element: sliderRef.current,
+    element: sliderRef,
     onDragX: onTouchDrag,
   });
 
