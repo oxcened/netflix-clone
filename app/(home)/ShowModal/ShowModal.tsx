@@ -70,7 +70,7 @@ export default function ShowModal({
         <div
           ref={ref}
           className={twMerge(
-            'hidden lg:block absolute z-20 transition-transform cursor-pointer duration-200',
+            'px-[0.2rem] hidden lg:block absolute z-20 transition-transform cursor-pointer duration-200',
             modalAnimationClasses[state],
             rowPositionToOriginClass[position!]
           )}
