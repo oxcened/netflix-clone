@@ -27,6 +27,18 @@ const rowPositionToOriginClass: Record<RowPosition, string> = {
   middle: '',
 };
 
+function getPaddingX(element?: Element) {
+  if (!element) {
+    return 0;
+  }
+
+  const strValue = window
+    .getComputedStyle(element)
+    .getPropertyValue('padding-left');
+
+  return parseInt(strValue);
+}
+
 export type ShowModalProps = {
   isOpen?: boolean;
   // [img element of the preview, URL source of the preview image, offset of the preview]
@@ -45,11 +57,13 @@ export default function ShowModal({
     return null;
   }
 
-  const hoveredShowRect = hoveredShow?.[0].getBoundingClientRect();
-  const top = (hoveredShowRect?.top ?? 0) + window.scrollY;
-  const left = (hoveredShowRect?.left ?? 0) + window.scrollX;
-  const height = hoveredShowRect?.height;
-  const width = hoveredShowRect?.width;
+  const hoveredElement = hoveredShow?.[0];
+  const hoveredElRect = hoveredElement?.getBoundingClientRect();
+  const paddingX = getPaddingX(hoveredElement);
+  const top = (hoveredElRect?.top ?? 0) + window.scrollY;
+  const left = (hoveredElRect?.left ?? 0) + window.scrollX + paddingX;
+  const height = hoveredElRect?.height;
+  const width = (hoveredElRect?.width ?? 0) - paddingX * 2;
   const position = hoveredShow?.[2];
   const buttonClass = 'w-6 h-6 rounded-full border grid place-content-center';
 
@@ -70,7 +84,7 @@ export default function ShowModal({
         <div
           ref={ref}
           className={twMerge(
-            'px-[0.2rem] hidden lg:block absolute z-20 transition-transform cursor-pointer duration-200',
+            'hidden lg:block absolute z-20 transition-transform cursor-pointer duration-200',
             modalAnimationClasses[state],
             rowPositionToOriginClass[position!]
           )}
