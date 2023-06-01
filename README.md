@@ -8,7 +8,7 @@ FlixClone
 
 Not your usual Netflix clone.
 
-[Demo](#demo) • [Key Features](#key-features) • [Tech Stack](#tech-stack) • [How to use](#run-on-your-machine) • [Maintainers](#maintainers) • [Credits](#credits) • [License](#license)
+[Demo](https://flixclone-oxcened.vercel.app/) • [Key Features](#key-features) • [Tech Stack](#tech-stack) • [How to use](#run-on-your-machine) • [Maintainers](#maintainers) • [Credits](#credits) • [License](#license)
 
 </div>
 
