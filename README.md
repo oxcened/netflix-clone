@@ -45,6 +45,12 @@ You can view the demo [here](https://flixclone-oxcened.vercel.app/).
 
 ## How to use
 
+### Preliminary
+
+1. Clone on your machine: `git clone https://github.com/oxcened/netflix-clone`
+2. Enter the repository folder: `cd netflix-clone`
+3. Install dependencies: `npm i`
+
 ### Run on your machine
 
 1. Run the development server: `npm run dev`
